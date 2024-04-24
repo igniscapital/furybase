@@ -153,7 +153,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "dialog.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       }
     ],
     [$props, $ctx, $refs]
@@ -235,7 +235,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         "__wab_instance",
                         sty.reveal___5BhD
                       )}
-                      duration={2000}
+                      duration={3000}
                       triggerOnce={true}
                     >
                       <div
@@ -272,7 +272,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__dEjIg
                       )}
                       direction={"left"}
-                      duration={2000}
+                      duration={3000}
                       reverse={false}
                       triggerOnce={true}
                     >
@@ -303,7 +303,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__tMxE8
                       )}
                       direction={"right"}
-                      duration={2000}
+                      duration={3000}
                       triggerOnce={true}
                     >
                       <PlasmicImg__
