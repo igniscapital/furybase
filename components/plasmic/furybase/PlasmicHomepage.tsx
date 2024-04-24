@@ -333,7 +333,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__ntuj4
                       )}
                       direction={"up"}
-                      duration={2000}
+                      duration={5000}
                       effect={"slide"}
                       triggerOnce={true}
                     >
@@ -371,7 +371,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__y3Ich
                       )}
                       direction={"left"}
-                      duration={2000}
+                      duration={3000}
                       triggerOnce={true}
                     >
                       <PlasmicImg__
@@ -398,7 +398,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     <Reveal
                       className={classNames("__wab_instance", sty.reveal__nHz)}
                       direction={"right"}
-                      duration={2000}
+                      duration={3000}
                       effect={"fade"}
                       triggerOnce={true}
                     >
@@ -429,7 +429,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__qW73R
                       )}
                       direction={"up"}
-                      duration={2000}
+                      duration={3000}
                       triggerOnce={true}
                     >
                       <div
