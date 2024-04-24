@@ -153,7 +153,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "dialog.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -235,6 +235,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         "__wab_instance",
                         sty.reveal___5BhD
                       )}
+                      duration={2000}
                       triggerOnce={true}
                     >
                       <div
@@ -271,6 +272,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__dEjIg
                       )}
                       direction={"left"}
+                      duration={2000}
                       reverse={false}
                       triggerOnce={true}
                     >
@@ -301,6 +303,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__tMxE8
                       )}
                       direction={"right"}
+                      duration={2000}
                       triggerOnce={true}
                     >
                       <PlasmicImg__
@@ -330,6 +333,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__ntuj4
                       )}
                       direction={"up"}
+                      duration={2000}
                       effect={"slide"}
                       triggerOnce={true}
                     >
@@ -367,6 +371,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__y3Ich
                       )}
                       direction={"left"}
+                      duration={2000}
                       triggerOnce={true}
                     >
                       <PlasmicImg__
@@ -393,6 +398,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     <Reveal
                       className={classNames("__wab_instance", sty.reveal__nHz)}
                       direction={"right"}
+                      duration={2000}
                       effect={"fade"}
                       triggerOnce={true}
                     >
@@ -423,6 +429,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__qW73R
                       )}
                       direction={"up"}
+                      duration={2000}
                       triggerOnce={true}
                     >
                       <div
