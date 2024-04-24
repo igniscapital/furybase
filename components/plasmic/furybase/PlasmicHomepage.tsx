@@ -333,7 +333,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__ntuj4
                       )}
                       direction={"up"}
-                      duration={5000}
+                      duration={6000}
                       effect={"slide"}
                       triggerOnce={false}
                     >
@@ -429,7 +429,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__qW73R
                       )}
                       direction={"up"}
-                      duration={3000}
+                      duration={2000}
                       triggerOnce={false}
                     >
                       <div
