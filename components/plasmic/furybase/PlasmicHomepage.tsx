@@ -673,12 +673,12 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMaxWidth={"100%"}
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
-                  displayWidth={"auto"}
+                  displayWidth={"60%"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/furybase/images/webpageLoadgif.gif",
-                    fullWidth: 1920,
-                    fullHeight: 1080,
+                    src: "/plasmic/furybase/images/furyBaseLogopng.png",
+                    fullWidth: 4000,
+                    fullHeight: 4000,
                     aspectRatio: undefined
                   }}
                 />
@@ -754,7 +754,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__wc08E
                     )}
                   >
-                    {"Open the fury"}
+                    {"Enter the Fury Gate"}
                   </div>
                 </Button>
               </Stack__>
