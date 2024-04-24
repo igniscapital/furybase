@@ -335,7 +335,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       direction={"up"}
                       duration={6000}
                       effect={"slide"}
-                      triggerOnce={false}
+                      triggerOnce={true}
                     >
                       <div
                         className={classNames(
@@ -429,8 +429,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal__qW73R
                       )}
                       direction={"up"}
-                      duration={2000}
-                      triggerOnce={false}
+                      duration={3000}
+                      triggerOnce={true}
                     >
                       <div
                         className={classNames(
