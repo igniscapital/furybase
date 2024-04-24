@@ -13,6 +13,7 @@
     "@plasmicapp/react-web": "^0.2.329",
     "@plasmicpkgs/plasmic-basic-components": "^0.0.210",
     "@plasmicpkgs/plasmic-cms": "^0.0.252",
+    "@plasmicpkgs/radix-ui": "^0.0.45",
     "@plasmicpkgs/react-awesome-reveal": "^3.8.192",
     "@plasmicpkgs/react-scroll-parallax": "^0.0.198",
     "next": "14.2.2",

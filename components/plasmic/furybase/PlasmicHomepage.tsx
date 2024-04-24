@@ -65,6 +65,8 @@ import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import { CmsQueryRepeater } from "@plasmicpkgs/plasmic-cms";
 import TextInput from "../../TextInput"; // plasmic-import: g-HFqyIPdzDj/component
 import Button from "../../Button"; // plasmic-import: 8hPr28mBOJd-/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import Dialog from "../../Dialog"; // plasmic-import: A_kMFsD1dPTD/component
 
 import { useScreenVariants as useScreenVariants_4KB6YnSCj1 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 4--kB6YnSCj1/globalVariant
 
@@ -96,7 +98,8 @@ export type PlasmicHomepage__OverridesType = {
   walletchecker?: Flex__<"section">;
   cmsDataFetcher?: Flex__<typeof CmsQueryRepeater>;
   textInput?: Flex__<typeof TextInput>;
-  button?: Flex__<typeof Button>;
+  embedHtml?: Flex__<typeof Embed>;
+  dialog?: Flex__<typeof Dialog>;
 };
 
 export interface DefaultHomepageProps {}
@@ -145,6 +148,12 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
+      },
+      {
+        path: "dialog.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       }
     ],
     [$props, $ctx, $refs]
@@ -211,21 +220,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"loadingBoundary"}
             data-plasmic-override={overrides.loadingBoundary}
             className={classNames("__wab_instance", sty.loadingBoundary)}
-            loadingState={
-              <DataCtxReader__>
-                {$ctx => (
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__khujg
-                    )}
-                  >
-                    {"Loading..."}
-                  </div>
-                )}
-              </DataCtxReader__>
-            }
+            loadingState={null}
           >
             <DataCtxReader__>
               {$ctx => (
@@ -566,11 +561,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               />
 
                               <Button
-                                data-plasmic-name={"button"}
-                                data-plasmic-override={overrides.button}
                                 className={classNames(
                                   "__wab_instance",
-                                  sty.button
+                                  sty.button__iwUcG
                                 )}
                                 onClick={async event => {
                                   const $steps = {};
@@ -654,6 +647,124 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
             </DataCtxReader__>
           </LoadingBoundary>
+          <Embed
+            data-plasmic-name={"embedHtml"}
+            data-plasmic-override={overrides.embedHtml}
+            className={classNames("__wab_instance", sty.embedHtml)}
+            code={
+              "<script>\r\nconst audio = new Audio('https://site-assets.plasmic.app/ad356dd0474f793dfa08930f74523567.mp3');\r\n</script>"
+            }
+          />
+
+          <Dialog
+            data-plasmic-name={"dialog"}
+            data-plasmic-override={overrides.dialog}
+            body={
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__tfCxb)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__kuKxr)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/furybase/images/webpageLoadgif.gif",
+                    fullWidth: 1920,
+                    fullHeight: 1080,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Button
+                  className={classNames("__wab_instance", sty.button___56NEe)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["runCode"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            customFunction: async () => {
+                              return document.addEventListener("click", () => {
+                                audio.play();
+                              });
+                            }
+                          };
+                          return (({ customFunction }) => {
+                            return customFunction();
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["runCode"] != null &&
+                      typeof $steps["runCode"] === "object" &&
+                      typeof $steps["runCode"].then === "function"
+                    ) {
+                      $steps["runCode"] = await $steps["runCode"];
+                    }
+
+                    $steps["updateDialogOpen"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["dialog", "open"]
+                            },
+                            operation: 4
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            const oldValue = $stateGet(objRoot, variablePath);
+                            $stateSet(objRoot, variablePath, !oldValue);
+                            return !oldValue;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateDialogOpen"] != null &&
+                      typeof $steps["updateDialogOpen"] === "object" &&
+                      typeof $steps["updateDialogOpen"].then === "function"
+                    ) {
+                      $steps["updateDialogOpen"] = await $steps[
+                        "updateDialogOpen"
+                      ];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__wc08E
+                    )}
+                  >
+                    {"Open the fury"}
+                  </div>
+                </Button>
+              </Stack__>
+            }
+            className={classNames("__wab_instance", sty.dialog)}
+            noTrigger={true}
+            onOpenChange={generateStateOnChangeProp($state, ["dialog", "open"])}
+            open={generateStateValueProp($state, ["dialog", "open"])}
+            title={null}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -669,7 +780,8 @@ const PlasmicDescendants = {
     "walletchecker",
     "cmsDataFetcher",
     "textInput",
-    "button"
+    "embedHtml",
+    "dialog"
   ],
   pageMetadataOverride: ["pageMetadataOverride"],
   loadingBoundary: [
@@ -677,14 +789,14 @@ const PlasmicDescendants = {
     "section",
     "walletchecker",
     "cmsDataFetcher",
-    "textInput",
-    "button"
+    "textInput"
   ],
   section: ["section"],
-  walletchecker: ["walletchecker", "cmsDataFetcher", "textInput", "button"],
-  cmsDataFetcher: ["cmsDataFetcher", "textInput", "button"],
+  walletchecker: ["walletchecker", "cmsDataFetcher", "textInput"],
+  cmsDataFetcher: ["cmsDataFetcher", "textInput"],
   textInput: ["textInput"],
-  button: ["button"]
+  embedHtml: ["embedHtml"],
+  dialog: ["dialog"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -697,7 +809,8 @@ type NodeDefaultElementType = {
   walletchecker: "section";
   cmsDataFetcher: typeof CmsQueryRepeater;
   textInput: typeof TextInput;
-  button: typeof Button;
+  embedHtml: typeof Embed;
+  dialog: typeof Dialog;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -766,7 +879,8 @@ export const PlasmicHomepage = Object.assign(
     walletchecker: makeNodeComponent("walletchecker"),
     cmsDataFetcher: makeNodeComponent("cmsDataFetcher"),
     textInput: makeNodeComponent("textInput"),
-    button: makeNodeComponent("button"),
+    embedHtml: makeNodeComponent("embedHtml"),
+    dialog: makeNodeComponent("dialog"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
