@@ -59,6 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { PlasmicHead } from "@plasmicapp/react-web";
 import { LoadingBoundary } from "@plasmicpkgs/plasmic-basic-components";
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import { CmsQueryRepeater } from "@plasmicpkgs/plasmic-cms";
@@ -89,6 +90,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  pageMetadataOverride?: Flex__<typeof PlasmicHead>;
   loadingBoundary?: Flex__<typeof LoadingBoundary>;
   section?: Flex__<"section">;
   walletchecker?: Flex__<"section">;
@@ -160,7 +162,20 @@ function PlasmicHomepage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -183,6 +198,15 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <PlasmicHead
+            data-plasmic-name={"pageMetadataOverride"}
+            data-plasmic-override={overrides.pageMetadataOverride}
+            className={classNames("__wab_instance", sty.pageMetadataOverride)}
+            description={"When the road gets blurry, it's time to Fury."}
+            image={"/plasmic/furybase/images/furyBaseLogopng.png"}
+            title={"Fury Base"}
+          />
+
           <LoadingBoundary
             data-plasmic-name={"loadingBoundary"}
             data-plasmic-override={overrides.loadingBoundary}
@@ -639,6 +663,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "pageMetadataOverride",
     "loadingBoundary",
     "section",
     "walletchecker",
@@ -646,6 +671,7 @@ const PlasmicDescendants = {
     "textInput",
     "button"
   ],
+  pageMetadataOverride: ["pageMetadataOverride"],
   loadingBoundary: [
     "loadingBoundary",
     "section",
@@ -665,6 +691,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  pageMetadataOverride: typeof PlasmicHead;
   loadingBoundary: typeof LoadingBoundary;
   section: "section";
   walletchecker: "section";
@@ -733,6 +760,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    pageMetadataOverride: makeNodeComponent("pageMetadataOverride"),
     loadingBoundary: makeNodeComponent("loadingBoundary"),
     section: makeNodeComponent("section"),
     walletchecker: makeNodeComponent("walletchecker"),
@@ -746,7 +774,7 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "Fury Base",
       description: "",
       ogImageSrc: "",
       canonical: ""
