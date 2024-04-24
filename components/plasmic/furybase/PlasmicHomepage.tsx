@@ -236,7 +236,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.reveal___5BhD
                       )}
                       duration={3000}
-                      triggerOnce={true}
+                      triggerOnce={false}
                     >
                       <div
                         className={classNames(
@@ -274,7 +274,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       direction={"left"}
                       duration={3000}
                       reverse={false}
-                      triggerOnce={true}
+                      triggerOnce={false}
                     >
                       <PlasmicImg__
                         alt={""}
@@ -304,7 +304,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                       direction={"right"}
                       duration={3000}
-                      triggerOnce={true}
+                      triggerOnce={false}
                     >
                       <PlasmicImg__
                         alt={""}
@@ -335,7 +335,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       direction={"up"}
                       duration={5000}
                       effect={"slide"}
-                      triggerOnce={true}
+                      triggerOnce={false}
                     >
                       <div
                         className={classNames(
@@ -372,7 +372,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                       direction={"left"}
                       duration={3000}
-                      triggerOnce={true}
+                      triggerOnce={false}
                     >
                       <PlasmicImg__
                         alt={""}
@@ -400,7 +400,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       direction={"right"}
                       duration={3000}
                       effect={"fade"}
-                      triggerOnce={true}
+                      triggerOnce={false}
                     >
                       <PlasmicImg__
                         alt={""}
@@ -430,7 +430,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                       direction={"up"}
                       duration={3000}
-                      triggerOnce={true}
+                      triggerOnce={false}
                     >
                       <div
                         className={classNames(
