@@ -673,7 +673,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMaxWidth={"100%"}
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
-                  displayWidth={"60%"}
+                  displayWidth={"600px"}
                   loading={"lazy"}
                   src={{
                     src: "/plasmic/furybase/images/furyBaseLogopng.png",
