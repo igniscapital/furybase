@@ -216,6 +216,20 @@
           "cssFilePath": "plasmic/furybase/PlasmicDialog.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "jHQydUUHXvAI",
+          "name": "Furyv2",
+          "type": "managed",
+          "projectId": "bMPTChRPRGG4FjB1GGbWyW",
+          "renderModuleFilePath": "plasmic/furybase/PlasmicFuryv2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/furyv-2.tsx"
+          },
+          "cssFilePath": "plasmic/furybase/PlasmicFuryv2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/furyv-2"
         }
       ],
       "icons": [
@@ -233,6 +247,36 @@
           "id": "RWD3ch4lzSH9",
           "name": "IconIcon",
           "moduleFilePath": "plasmic/furybase/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "rCMjxPHFPy5c",
+          "name": "Animate2Svg2Icon",
+          "moduleFilePath": "plasmic/furybase/icons/PlasmicIcon__Animate2Svg2.tsx"
+        },
+        {
+          "id": "dmrUhBU1BNvF",
+          "name": "TwitterRoundsvgIcon",
+          "moduleFilePath": "plasmic/furybase/icons/PlasmicIcon__TwitterRoundsvg.tsx"
+        },
+        {
+          "id": "rP7hl49s7YC7",
+          "name": "TelegramFillSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/furybase/icons/PlasmicIcon__TelegramFillSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "TRBU5GA2t5VO",
+          "name": "PlaySquareSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/furybase/icons/PlasmicIcon__PlaySquareSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "O-gEjLC1q9Km",
+          "name": "PauseSquareSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/furybase/icons/PlasmicIcon__PauseSquareSvgrepoComsvg.tsx"
+        },
+        {
+          "id": "Z6E7SprJgSpF",
+          "name": "VolumeMuteFillSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/furybase/icons/PlasmicIcon__VolumeMuteFillSvgrepoComsvg.tsx"
         }
       ],
       "images": [
@@ -275,6 +319,71 @@
           "id": "XTzNk07wmhg_",
           "name": "Webpage_load.gif",
           "filePath": "../public/plasmic/furybase/images/webpageLoadgif.gif"
+        },
+        {
+          "id": "fqghnTaXiD92",
+          "name": "moon 1-crop.png",
+          "filePath": "../public/plasmic/furybase/images/moon1Croppng.png"
+        },
+        {
+          "id": "c30Qdmuxh1nt",
+          "name": "Torii 1-crop.png",
+          "filePath": "../public/plasmic/furybase/images/torii1Croppng.png"
+        },
+        {
+          "id": "kJIEtoBLjlTs",
+          "name": "animation1.svg",
+          "filePath": "../public/plasmic/furybase/images/animation1Svg.svg"
+        },
+        {
+          "id": "wjIkHi6AyhdI",
+          "name": "animate2.svg",
+          "filePath": "../public/plasmic/furybase/images/animate2Svg.svg"
+        },
+        {
+          "id": "uMXnCu2yzLkB",
+          "name": "wallet_checker_logo 1-min.png",
+          "filePath": "../public/plasmic/furybase/images/walletCheckerLogo1Minpng.png"
+        },
+        {
+          "id": "gK9WlwiAcPEF",
+          "name": "scroll 1.png",
+          "filePath": "../public/plasmic/furybase/images/scroll1Png.png"
+        },
+        {
+          "id": "p-bzbWDo_Ixq",
+          "name": "scroll1-crop.png",
+          "filePath": "../public/plasmic/furybase/images/scroll1Croppng.png"
+        },
+        {
+          "id": "A2ziKCYsXrDe",
+          "name": "scroll2-crop.png",
+          "filePath": "../public/plasmic/furybase/images/scroll2Croppng.png"
+        },
+        {
+          "id": "shdKq7Iin6zv",
+          "name": "scroll3-crop.png",
+          "filePath": "../public/plasmic/furybase/images/scroll3Croppng.png"
+        },
+        {
+          "id": "TvYlAjnao1U-",
+          "name": "whitelisted-crop.png",
+          "filePath": "../public/plasmic/furybase/images/whitelistedCroppng.png"
+        },
+        {
+          "id": "6_qkZfENcRqx",
+          "name": "not_whitelisted-crop.png",
+          "filePath": "../public/plasmic/furybase/images/notWhitelistedCroppng.png"
+        },
+        {
+          "id": "-arxX7LjF0Iu",
+          "name": "not_whitelisted-crop.png 2",
+          "filePath": "../public/plasmic/furybase/images/notWhitelistedCroppng2.png"
+        },
+        {
+          "id": "54MQ3ZvWLsDB",
+          "name": "whitelisted-crop.png 2",
+          "filePath": "../public/plasmic/furybase/images/whitelistedCroppng2.png"
         }
       ],
       "indirect": false,
@@ -445,6 +554,56 @@
       ],
       "customFunctions": [],
       "jsBundleThemes": []
+    },
+    {
+      "projectId": "5dGW8Awro3qq8Hh5MveXLP",
+      "projectApiToken": "wVHvHSTRyoO1MQddr5ypmW8AfwiMMy7h0Iaj4Q2YmYLLEo2A4L6pLn8Fydm8wQkTAJV9uAD5bJPo8bmGg",
+      "projectName": "lottie-react",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/lottie_react/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "BPNsJ2qis6",
+          "name": "LottieWrapper",
+          "displayName": "hostless-lottie-react",
+          "componentImportPath": "@plasmicpkgs/lottie-react"
+        },
+        {
+          "id": "vbTFHH9P-cuM",
+          "name": "AsyncLottieWrapper",
+          "displayName": "hostless-lottie-async-react",
+          "componentImportPath": "@plasmicpkgs/lottie-react"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "szjgMQpPpxhmkjnaBvZQJG",
+      "projectApiToken": "xBIsrWHdWZ9kVgFEGUt29LOZPWfm0XidYqRHqPhQXsEjDHevjIbp44nEYMIZ46YOoxrN8anfXjreTkDtFjTA",
+      "projectName": "react-parallax-tilt",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_parallax_tilt/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "PfY466VIuq",
+          "name": "Tilt",
+          "displayName": "hostless-parallax-tilt",
+          "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
+        }
+      ],
+      "customFunctions": []
     }
   ],
   "globalVariants": {
