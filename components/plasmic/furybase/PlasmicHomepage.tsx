@@ -158,7 +158,8 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "searchwl",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "0x8c3b4aCb049054c68F4Edc46B41ad6D62372D3E7"
       },
       {
         path: "isWl",
@@ -180,11 +181,11 @@ function PlasmicHomepage__RenderFunc(props: {
     query: usePlasmicDataOp(() => {
       return {
         sourceId: "qxVE3SbYgZbTeXuwfuZYXW",
-        opId: "f5ba01bf-8c70-4d1f-a578-b93135af42bb",
+        opId: "cc14197e-4c08-45be-b342-a46f6c152817",
         userArgs: {
-          filters: [$state.searchwl]
+          query: [$state.searchwl]
         },
-        cacheKey: `plasmic.$.f5ba01bf-8c70-4d1f-a578-b93135af42bb.$.`,
+        cacheKey: `plasmic.$.cc14197e-4c08-45be-b342-a46f6c152817.$.`,
         invalidatedKeys: null,
         roleId: null
       };
