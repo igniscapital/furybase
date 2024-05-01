@@ -148,7 +148,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "dialog.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       },
       {
         path: "textInput.value",
@@ -354,7 +354,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMaxWidth={"100%"}
                     displayMinHeight={"0"}
                     displayMinWidth={"0"}
-                    displayWidth={"300px"}
+                    displayWidth={"200px"}
                     loading={"lazy"}
                     src={{
                       src: "/plasmic/furybase/images/untitledArtworkgif.gif",
