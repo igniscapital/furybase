@@ -72,6 +72,8 @@ import Button from "../../Button"; // plasmic-import: 8hPr28mBOJd-/component
 import Dialog from "../../Dialog"; // plasmic-import: A_kMFsD1dPTD/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
+import { useScreenVariants as useScreenVariants_4KB6YnSCj1 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 4--kB6YnSCj1/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: bMPTChRPRGG4FjB1GGbWyW/projectcss
@@ -100,8 +102,8 @@ export type PlasmicHomepage__OverridesType = {
   pageMetadataOverride?: Flex__<typeof PlasmicHead>;
   columns?: Flex__<"div">;
   textInput?: Flex__<typeof TextInput>;
+  h1?: Flex__<"h1">;
   dialog?: Flex__<typeof Dialog>;
-  text?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -196,6 +198,10 @@ function PlasmicHomepage__RenderFunc(props: {
 
     $queries = new$Queries;
   }
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariants_4KB6YnSCj1()
+  });
 
   return (
     <React.Fragment>
@@ -330,225 +336,287 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMaxWidth={"100%"}
                     displayMinHeight={"0"}
                     displayMinWidth={"0"}
-                    displayWidth={"auto"}
+                    displayWidth={"600px"}
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/furybase/images/walletCheckerLogo1Minpng.png",
-                      fullWidth: 572,
-                      fullHeight: 137,
+                      src: "/plasmic/furybase/images/furyBaseLogo1Png.png",
+                      fullWidth: 388,
+                      fullHeight: 140,
                       aspectRatio: undefined
                     }}
                   />
 
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__aofKw)}
-                  >
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img___4Usi6)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/furybase/images/scroll1Croppng.png",
-                        fullWidth: 55,
-                        fullHeight: 125,
-                        aspectRatio: undefined
-                      }}
-                    />
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__mztwJ)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"300px"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/furybase/images/untitledArtworkgif.gif",
+                      fullWidth: 480,
+                      fullHeight: 480,
+                      aspectRatio: undefined
+                    }}
+                  />
 
+                  {false ? (
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__wdJMv)}
+                      className={classNames(projectcss.all, sty.freeBox__aofKw)}
                     >
-                      <TextInput
-                        data-plasmic-name={"textInput"}
-                        data-plasmic-override={overrides.textInput}
-                        className={classNames("__wab_instance", sty.textInput)}
-                        onChange={async (...eventArgs: any) => {
-                          ((...eventArgs) => {
-                            generateStateOnChangeProp($state, [
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img___4Usi6)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/furybase/images/scroll1Croppng.png",
+                          fullWidth: 55,
+                          fullHeight: 125,
+                          aspectRatio: undefined
+                        }}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__wdJMv
+                        )}
+                      >
+                        <TextInput
+                          data-plasmic-name={"textInput"}
+                          data-plasmic-override={overrides.textInput}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.textInput
+                          )}
+                          onChange={async (...eventArgs: any) => {
+                            ((...eventArgs) => {
+                              generateStateOnChangeProp($state, [
+                                "textInput",
+                                "value"
+                              ])((e => e.target?.value).apply(null, eventArgs));
+                            }).apply(null, eventArgs);
+                            (async event => {
+                              const $steps = {};
+
+                              $steps["runCode"] = true
+                                ? (() => {
+                                    const actionArgs = {
+                                      customFunction: async () => {
+                                        return (() => {
+                                          return ($state.searchwl =
+                                            $state.textInput.value);
+                                        })();
+                                      }
+                                    };
+                                    return (({ customFunction }) => {
+                                      return customFunction();
+                                    })?.apply(null, [actionArgs]);
+                                  })()
+                                : undefined;
+                              if (
+                                $steps["runCode"] != null &&
+                                typeof $steps["runCode"] === "object" &&
+                                typeof $steps["runCode"].then === "function"
+                              ) {
+                                $steps["runCode"] = await $steps["runCode"];
+                              }
+                            }).apply(null, eventArgs);
+                          }}
+                          placeholder={"Check your address here.."}
+                          value={
+                            generateStateValueProp($state, [
                               "textInput",
                               "value"
-                            ])((e => e.target?.value).apply(null, eventArgs));
-                          }).apply(null, eventArgs);
-                          (async event => {
-                            const $steps = {};
-
-                            $steps["runCode"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    customFunction: async () => {
-                                      return (() => {
-                                        return ($state.searchwl =
-                                          $state.textInput.value);
-                                      })();
-                                    }
-                                  };
-                                  return (({ customFunction }) => {
-                                    return customFunction();
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["runCode"] != null &&
-                              typeof $steps["runCode"] === "object" &&
-                              typeof $steps["runCode"].then === "function"
-                            ) {
-                              $steps["runCode"] = await $steps["runCode"];
-                            }
-                          }).apply(null, eventArgs);
+                            ]) ?? ""
+                          }
+                        />
+                      </div>
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__gj3Nr)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/furybase/images/scroll3Croppng.png",
+                          fullWidth: 24,
+                          fullHeight: 125,
+                          aspectRatio: undefined
                         }}
-                        placeholder={"Check your address here.."}
-                        value={
-                          generateStateValueProp($state, [
-                            "textInput",
-                            "value"
-                          ]) ?? ""
-                        }
                       />
                     </div>
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__gj3Nr)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/furybase/images/scroll3Croppng.png",
-                        fullWidth: 24,
-                        fullHeight: 125,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__icKry)}
-                  >
-                    <Button
-                      className={classNames("__wab_instance", sty.button__qRpB)}
-                      color={"red"}
-                      isDisabled={(() => {
-                        try {
-                          return $queries.query.isLoading;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return [];
-                          }
-                          throw e;
-                        }
-                      })()}
-                      onClick={async event => {
-                        const $steps = {};
-
-                        $steps["runCode"] = true
-                          ? (() => {
-                              const actionArgs = {
-                                customFunction: async () => {
-                                  return (() => {
-                                    $state.searchwl = $state.textInput.value;
-                                    $state.isWl =
-                                      $queries.query.data.length !== 0;
-                                    return $state.searchwl;
-                                  })();
-                                }
-                              };
-                              return (({ customFunction }) => {
-                                return customFunction();
-                              })?.apply(null, [actionArgs]);
-                            })()
-                          : undefined;
-                        if (
-                          $steps["runCode"] != null &&
-                          typeof $steps["runCode"] === "object" &&
-                          typeof $steps["runCode"].then === "function"
-                        ) {
-                          $steps["runCode"] = await $steps["runCode"];
-                        }
-                      }}
+                  ) : null}
+                  {false ? (
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__icKry)}
                     >
-                      {"Check Whitelist"}
-                    </Button>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__qRpB
+                        )}
+                        color={"red"}
+                        isDisabled={(() => {
+                          try {
+                            return $queries.query.isLoading;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()}
+                        onClick={async event => {
+                          const $steps = {};
+
+                          $steps["runCode"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  customFunction: async () => {
+                                    return (() => {
+                                      $state.searchwl = $state.textInput.value;
+                                      $state.isWl =
+                                        $queries.query.data.length !== 0;
+                                      return $state.searchwl;
+                                    })();
+                                  }
+                                };
+                                return (({ customFunction }) => {
+                                  return customFunction();
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["runCode"] != null &&
+                            typeof $steps["runCode"] === "object" &&
+                            typeof $steps["runCode"].then === "function"
+                          ) {
+                            $steps["runCode"] = await $steps["runCode"];
+                          }
+                        }}
+                      >
+                        {"Check Whitelist"}
+                      </Button>
+                    </div>
+                  ) : null}
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__zH2M)}
+                  >
+                    <h1
+                      data-plasmic-name={"h1"}
+                      data-plasmic-override={overrides.h1}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1
+                      )}
+                    >
+                      {"Tokenomics"}
+                    </h1>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__aU8Nu
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "10,000,000,000 Supply\n10% Marketing Dev and Team\n10% Airdrop\n80% LP\n\nCA : 0x37f926b265514a8caf18b\nbad8c7b5d979273e74b"
+                        : "10,000,000,000 Supply\n10% Marketing Dev and Team\n10% Airdrop\n80% LP\n\nCA : 0x37f926b265514a8caf18bbad8c7b5d979273e74b"}
+                    </div>
+                  </Stack__>
+                </div>
+                {false ? (
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___8G6Mz)}
+                  >
+                    {(() => {
+                      try {
+                        return $state.isWl;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__ponjh)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        id={"whitelisted"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/furybase/images/whitelistedCroppng2.png",
+                          fullWidth: 303,
+                          fullHeight: 45,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return !$state.isWl;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__rpp3L)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        id={"notwhitelisted"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/furybase/images/notWhitelistedCroppng2.png",
+                          fullWidth: 303,
+                          fullHeight: 45,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    ) : null}
                   </div>
-                </div>
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___8G6Mz)}
-                >
-                  {(() => {
-                    try {
-                      return $state.isWl;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__ponjh)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      id={"whitelisted"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/furybase/images/whitelistedCroppng2.png",
-                        fullWidth: 303,
-                        fullHeight: 45,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return !$state.isWl;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__rpp3L)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      id={"notwhitelisted"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/furybase/images/notWhitelistedCroppng2.png",
-                        fullWidth: 303,
-                        fullHeight: 45,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  ) : null}
-                </div>
+                ) : null}
                 <Stack__
                   as={"div"}
                   hasGap={true}
@@ -687,12 +755,10 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                 >
                   <div
-                    data-plasmic-name={"text"}
-                    data-plasmic-override={overrides.text}
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text
+                      sty.text__wc08E
                     )}
                   >
                     {"Enter the Fury Gate"}
@@ -718,14 +784,14 @@ const PlasmicDescendants = {
     "pageMetadataOverride",
     "columns",
     "textInput",
-    "dialog",
-    "text"
+    "h1",
+    "dialog"
   ],
   pageMetadataOverride: ["pageMetadataOverride"],
-  columns: ["columns", "textInput"],
+  columns: ["columns", "textInput", "h1"],
   textInput: ["textInput"],
-  dialog: ["dialog", "text"],
-  text: ["text"]
+  h1: ["h1"],
+  dialog: ["dialog"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -735,8 +801,8 @@ type NodeDefaultElementType = {
   pageMetadataOverride: typeof PlasmicHead;
   columns: "div";
   textInput: typeof TextInput;
+  h1: "h1";
   dialog: typeof Dialog;
-  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -802,8 +868,8 @@ export const PlasmicHomepage = Object.assign(
     pageMetadataOverride: makeNodeComponent("pageMetadataOverride"),
     columns: makeNodeComponent("columns"),
     textInput: makeNodeComponent("textInput"),
+    h1: makeNodeComponent("h1"),
     dialog: makeNodeComponent("dialog"),
-    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

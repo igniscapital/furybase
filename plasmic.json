@@ -384,6 +384,16 @@
           "id": "54MQ3ZvWLsDB",
           "name": "whitelisted-crop.png 2",
           "filePath": "../public/plasmic/furybase/images/whitelistedCroppng2.png"
+        },
+        {
+          "id": "24wdaeKb4SZO",
+          "name": "fury_base_logo 1.png",
+          "filePath": "../public/plasmic/furybase/images/furyBaseLogo1Png.png"
+        },
+        {
+          "id": "3LzHAwfiyNYk",
+          "name": "Untitled_Artwork.gif",
+          "filePath": "../public/plasmic/furybase/images/untitledArtworkgif.gif"
         }
       ],
       "indirect": false,
@@ -493,8 +503,7 @@
           "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",

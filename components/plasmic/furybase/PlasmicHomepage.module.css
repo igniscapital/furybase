@@ -183,8 +183,8 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -194,8 +194,19 @@
   position: relative;
   object-fit: cover;
   max-width: 100%;
+  width: 600px;
 }
 .img__kFNo6 > picture > img {
+  object-fit: cover;
+}
+.img__mztwJ {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 300px;
+  border-radius: 24px;
+}
+.img__mztwJ > picture > img {
   object-fit: cover;
 }
 .freeBox__aofKw {
@@ -284,6 +295,55 @@
   object-fit: cover;
   width: auto;
   height: 1em;
+}
+.freeBox__zH2M {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__zH2M > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-top: calc(0px - 12px);
+  height: calc(100% + 12px);
+}
+.freeBox__zH2M > :global(.__wab_flex-container) > *,
+.freeBox__zH2M > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__zH2M > :global(.__wab_flex-container) > picture > img,
+.freeBox__zH2M
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 12px;
+}
+.h1 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  font-family: "Luckiest Guy";
+  color: #112b5d;
+  min-width: 0;
+}
+.text__aU8Nu {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  font-family: "Luckiest Guy";
+  color: #112b5d;
+  font-size: 20px;
+  min-width: 0;
 }
 .freeBox___8G6Mz {
   display: flex;
@@ -446,7 +506,7 @@
   width: auto;
   height: 1em;
 }
-.text {
+.text__wc08E {
   padding-right: 0px;
 }
 .svg__fFVcp {

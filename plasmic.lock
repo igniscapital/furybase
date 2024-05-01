@@ -75,7 +75,7 @@
         "84wxoth5npGrp6RRXPL88z": "4.25.0",
         "58GpZjZCWTaJ8AUhpCwt2K": "3.23.0",
         "caTPwKxj5ZrD9LQ7DMdK4Z": "3.34.0",
-        "sqPBLwEBBKHA2WDuGb17eV": "0.9.0",
+        "sqPBLwEBBKHA2WDuGb17eV": "0.10.0",
         "szjgMQpPpxhmkjnaBvZQJG": "2.23.0",
         "5dGW8Awro3qq8Hh5MveXLP": "1.22.0"
       },
@@ -94,12 +94,12 @@
         {
           "type": "renderModule",
           "assetId": "LYs952dc6Uez",
-          "checksum": "2618676e7e1dc89b29eacdf079b0e96f"
+          "checksum": "442c70eb4e9c159220abed1d38abbdcb"
         },
         {
           "type": "cssRules",
           "assetId": "LYs952dc6Uez",
-          "checksum": "2618676e7e1dc89b29eacdf079b0e96f"
+          "checksum": "442c70eb4e9c159220abed1d38abbdcb"
         },
         {
           "type": "renderModule",
@@ -294,22 +294,27 @@
         {
           "assetId": "bMPTChRPRGG4FjB1GGbWyW",
           "type": "projectCss",
-          "checksum": "00bb5b24de34e0bb1287f964f9a96419"
+          "checksum": "27bb5b4e0227313ffd1fb565a918d2f5"
+        },
+        {
+          "type": "image",
+          "assetId": "24wdaeKb4SZO",
+          "checksum": "c12f62e1a928b590b350d5a652d9671e"
+        },
+        {
+          "type": "image",
+          "assetId": "3LzHAwfiyNYk",
+          "checksum": "9037fac044b5b3cfd163dae5009fc07f"
         }
       ],
       "codegenVersion": "0.0.1"
     },
     {
       "projectId": "sqPBLwEBBKHA2WDuGb17eV",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "dependencies": {},
       "lang": "ts",
       "fileLocks": [
-        {
-          "assetId": "sqPBLwEBBKHA2WDuGb17eV",
-          "type": "projectCss",
-          "checksum": "e1ec850476829c38b0f9b6d4f7ac446a"
-        },
         {
           "type": "renderModule",
           "assetId": "5nirPCGmCnRD",
@@ -329,6 +334,11 @@
           "type": "icon",
           "assetId": "MbDRsJU0e3bw",
           "checksum": "92672aa6935120ebaac11939d8d127bb"
+        },
+        {
+          "assetId": "sqPBLwEBBKHA2WDuGb17eV",
+          "type": "projectCss",
+          "checksum": "e1ec850476829c38b0f9b6d4f7ac446a"
         }
       ],
       "codegenVersion": "0.0.1"
